@@ -1,0 +1,22 @@
+{
+  "name": "Browser Board",
+  "description": "Turn your browser screen into a whiteboard",
+  "icons": {
+  	"16": "icon16.png",
+  	"32": "icon32.png",
+  	"64": "icon64.png"
+  },
+  "version": "0.0.0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+  	"default_popup": "popup.html"
+  },
+  "permissions": ["storage","webNavigation","scripting","tabs"],
+  "host_permissions": ["http://*/","https://*/"],
+  "content_security_policy": {
+  	"extension-pages": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  }
+}
